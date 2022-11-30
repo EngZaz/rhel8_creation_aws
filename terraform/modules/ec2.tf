@@ -17,7 +17,7 @@ resource "aws_eip" "one" {
 
 resource "aws_instance" "rhel8" {
   ami           = data.aws_ami.rhel8.id
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
   key_name = aws_key_pair.my_public_key.key_name
 
   network_interface {
